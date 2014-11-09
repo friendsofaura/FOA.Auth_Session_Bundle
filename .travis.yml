@@ -6,6 +6,7 @@ php:
   - 5.6
   - hhvm
 before_script:
+  - composer update --dev
   - wget https://scrutinizer-ci.com/ocular.phar
 script:
   - phpunit -c tests/unit/ --coverage-clover=coverage.clover
