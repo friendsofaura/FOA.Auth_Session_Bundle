@@ -12,6 +12,8 @@ It is installable and autoloadable via Composer as [foa/auth-session-bundle](htt
 
 ### Quality
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/badges/quality-score.png?b=develop-2)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/)
+[![Code Coverage](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/badges/coverage.png?b=develop-2)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/)
 [![Build Status](https://travis-ci.org/friendsofaura/FOA.Auth_Session_Bundle.png?branch=develop-2)](https://travis-ci.org/friendsofaura/FOA.Auth_Session_Bundle)
 
 > First install the dependencies via the command : composer install --dev
