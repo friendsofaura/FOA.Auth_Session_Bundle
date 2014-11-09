@@ -9,9 +9,7 @@ before_script:
   - wget https://scrutinizer-ci.com/ocular.phar
 script:
   - phpunit -c tests/unit/ --coverage-clover=coverage.clover
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
   - phpunit -c tests/container/ --coverage-clover=coverage.clover
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 notifications:
   - email: true
