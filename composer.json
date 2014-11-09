@@ -1,0 +1,42 @@
+{
+    "name": "foa/auth-session-bundle",
+    "description": "Integration of Aura.Auth and Aura.Session",
+    "keywords": [
+        "auth",
+        "authentication",
+        "session"
+    ],
+    "type": "library",
+    "require": {
+        "aura/auth": "2.0.*@dev",
+        "aura/session": "2.0.*@dev",
+        "ircmaxell/random-lib": "~1.0"
+    },
+    "require-dev": {
+        "aura/di": "~2.1"
+    },
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Hari KT",
+            "email": "kthari85@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FOA\\Auth_Session_Bundle\\": "src/",
+            "FOA\\Auth_Session_Bundle\\_Config\\": "config/"
+        }
+    },
+    "extra": {
+        "aura": {
+            "type": "bundle",
+            "config": {
+                "common": "FOA\\Auth_Session_Bundle\\_Config\\Common"
+            }
+        },
+        "branch-alias": {
+            "dev-develop-2": "2.0.x-dev"
+        }
+    }
+}
