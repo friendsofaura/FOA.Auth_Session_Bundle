@@ -2,7 +2,7 @@
     <testsuites>
         <testsuite>
             <directory>./</directory>
-            <exclude>./vendor</exclude>
+            <exclude>./../../vendor</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
