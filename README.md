@@ -6,23 +6,19 @@ Integrate `aura/session`, `ircmaxell/random-lib` and `aura/auth`.
 
 ### Installation
 
-This library requires PHP 5.3 or later, and has no userland dependencies.
-
-It is installable and autoloadable via Composer as [foa/auth-session-bundle](https://packagist.org/packages/foa/auth-session-bundle).
+```
+composer require foa/auth-session-bundle
+```
 
 ### Quality
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/badges/quality-score.png?b=develop-2)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/)
-[![Code Coverage](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/badges/coverage.png?b=develop-2)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/)
-[![Build Status](https://travis-ci.org/friendsofaura/FOA.Auth_Session_Bundle.png?branch=develop-2)](https://travis-ci.org/friendsofaura/FOA.Auth_Session_Bundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/)
+[![Code Coverage](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Auth_Session_Bundle/)
+[![Build Status](https://travis-ci.org/friendsofaura/FOA.Auth_Session_Bundle.png?branch=master)](https://travis-ci.org/friendsofaura/FOA.Auth_Session_Bundle)
 
-> First install the dependencies via the command : composer install --dev
+> First install the dependencies via the command : composer install
 
-To run the unit tests at the command line, issue `phpunit -c tests/unit/`. (This requires [PHPUnit][] to be available as `phpunit`.)
-
-[PHPUnit]: http://phpunit.de/manual/
-
-To run the [Aura.Di][] container configuration tests at the command line, issue `phpunit -c tests/container/`.
+To run the unit tests at the command line, issue `./vendor/bin/phpunit`.
 
 [Aura.Di]: https://github.com/auraphp/Aura.Di
 [Composer]: http://getcomposer.org/

@@ -10,7 +10,7 @@ php:
 sudo: false
 
 before_script:
-  - composer update --dev
+  - composer install
   - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
