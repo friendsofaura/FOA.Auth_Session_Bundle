@@ -14,8 +14,6 @@ use Aura\Session\Phpfunc;
 use Aura\Session\CsrfTokenFactory;
 use Aura\Session\SegmentFactory;
 use FOA\Auth_Session_Bundle\RandomVal;
-use RandomLib\Generator;
-use RandomLib\Factory as RandomLibFactory;
 
 /**
  *
@@ -26,8 +24,6 @@ use RandomLib\Factory as RandomLibFactory;
  */
 class SessionFactory
 {
-    protected $generator;
-
     /**
      *
      * Creates a new Session manager.
@@ -43,38 +39,10 @@ class SessionFactory
         $phpfunc = new Phpfunc;
         return new Session(
             new SegmentFactory,
-            new CsrfTokenFactory(new RandomVal($this->getGenerator())),
+            new CsrfTokenFactory(new RandomVal()),
             $phpfunc,
             $cookies,
             $delete_cookie
         );
-    }
-
-    /**
-     *
-     * Generator to create random value
-     *
-     * @return Generator
-     *
-     */
-    public function getGenerator()
-    {
-        if (! $this->generator instanceof Generator) {
-            $factory = new RandomLibFactory;
-            $this->generator = $factory->getMediumStrengthGenerator();
-        }
-        return $this->generator;
-    }
-
-    /**
-     *
-     * @param Generator $generator Random value generator
-     *
-     * @return null
-     *
-     */
-    public function setGenerator(Generator $generator)
-    {
-        $this->generator = $generator;
     }
 }

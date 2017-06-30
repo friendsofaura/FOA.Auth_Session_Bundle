@@ -1,8 +1,12 @@
 # FOA.Auth_Session_Bundle
 
-Integrate `aura/session`, `ircmaxell/random-lib` and `aura/auth`.
+Integrate `aura/session` and `aura/auth`.
 
 ## Foreword
+
+## PHP version compatibilty
+
+See `.travis.yml` file.
 
 ### Installation
 
@@ -43,17 +47,4 @@ $session_factory = new \FOA\Auth_Session_Bundle\SessionFactory();
 $session = $session_factory->newInstance($_COOKIE);
 $segment = new \FOA\Auth_Session_Bundle\Segment($session, 'Aura\Auth\Session');
 $auth_factory = new \Aura\Auth\AuthFactory($_COOKIE, $session, $segment);
-```
-
-## Random Generator Strength
-
-Under the hood, for CSRF token generation [RandomLib](https://github.com/ircmaxell/RandomLib) is used. By default the `\FOA\Auth_Session_Bundle\SessionFactory` creates generator of strength `SecurityLib\Strength::MEDIUM`. You can change the generator as below.
-
-```php
-$session_factory = new \FOA\Auth_Session_Bundle\SessionFactory();
-$factory = new RandomLib\Factory;
-// $generator = $factory->getHighStrengthGenerator();
-$generator = $factory->getLowStrengthGenerator();
-$session_factory->setGenerator($generator);
-$session = $session_factory->newInstance();
 ```

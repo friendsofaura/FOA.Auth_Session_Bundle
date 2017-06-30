@@ -11,20 +11,16 @@
 namespace FOA\Auth_Session_Bundle;
 
 use Aura\Session\RandvalInterface;
-use RandomLib\Generator;
 
 class RandomVal implements RandvalInterface
 {
-    protected $generator;
-
-    public function __construct(Generator $generator)
-    {
-        $this->generator = $generator;
-    }
-
+    /**
+     * Generates a 32 bit string
+     * Curious why 16 being passed ?
+     * @see https://github.com/thephpleague/oauth2-client/blob/aad09cb91fe35740fa754402e5ec203f215a85e5/src/Provider/AbstractProvider.php#L267
+     */
     public function generate()
     {
-        $bytes = $this->generator->generate(32);
-        return $bytes;
+        return bin2hex(random_bytes(16));
     }
 }

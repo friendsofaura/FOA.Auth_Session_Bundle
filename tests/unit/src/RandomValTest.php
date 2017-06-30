@@ -17,9 +17,7 @@ class RandomValTest  extends \PHPUnit_Framework_TestCase
 {
     public function testGenerate()
     {
-        $factory = new RandomLibFactory;
-        $generator = $factory->getLowStrengthGenerator();
-        $random = new RandomVal($generator);
+        $random = new RandomVal();
         $this->assertEquals(32, strlen($random->generate()));
     }
 }
