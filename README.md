@@ -4,6 +4,10 @@ Integrate `aura/session` and `aura/auth`.
 
 ## Foreword
 
+## PHP version compatibilty
+
+See `.travis.yml` file.
+
 ### Installation
 
 ```
